@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda Araujo Dias - Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #ec4899 0%, #1e1b4b 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+           
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-info h1 {
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        .profile-info h2 {
+            color: white;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5e7eb;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .info-item::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+
+        .info-item.job::before {
+            content: '👨‍💻';
+        }
+
+        .info-item.location::before {
+            content: '📍';
+        }
+
+        .info-item.phone::before {
+            content: '📱';
+        }
+
+        .info-item.email::before {
+            content: '✉️';
+        }
+
+        .menu-icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .accordion {
+            margin-top: 20px;
+        }
+
+        .accordion-item {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.3) 0%, rgba(168, 85, 247, 0.3) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.5) 0%, rgba(168, 85, 247, 0.5) 100%);
+        }
+
+        .accordion-header h3 {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .accordion-icon {
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+        }
+
+        .accordion-body {
+            padding: 25px;
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+            border: 1px solid rgba(139, 92, 246, 0.5);
+        }
+
+        .project-card {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .project-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .project-card p {
+            color: #e5e7eb;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .profile-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-section">
+                <div class="profile-img">
+    <img src="my-photo.png" alt="Amanda  Araujo Dias"> 
+</div>
+
+                <div class="profile-info">
+                    <h1>Olá, eu sou</h1>
+                    <h2>Amanda Araujo Dias</h2>
+                    <div class="info-item job">Dev & QA</div>
+                    <div class="info-item location">Nova Friburgo-RJ </div>
+                    <div class="info-item phone">(22) 992424587</div>
+                    <div class="info-item email">amandaaraujodias1@gmail.com</div>
+                </div>
+            </div>
+            <div class="menu-icon">⋮</div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Skills</h3>
+                    <span class="accordion-icon">▲</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Testing/QA</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Idiomas</h3>
+                    <span class="accordion-icon">▲</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p><strong>Português:</strong> Nativo</p>
+                        <p><strong>Inglês:</strong> Básico</p>
+                        <p><strong>Espanhol:</strong> Básico</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Portfólio</h3>
+                    <span class="accordion-icon">▲</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <div class="project-card">
+                            <h4>Sistema de Gestão Web</h4>
+                            <p>Desenvolvimento de sistema completo para gestão empresarial utilizando React e Node.js, com integração de banco de dados e autenticação segura.</p>
+                        </div>
+                        <div class="project-card">
+                            <h4>Automação de Testes</h4>
+                            <p>Implementação de suite de testes automatizados para garantia de qualidade, reduzindo em 60% o tempo de validação de releases.</p>
+                        </div>
+                        <div class="project-card">
+                            <h4>API RESTful</h4>
+                            <p>Criação de API robusta e escalável para integração entre sistemas, com documentação completa e testes unitários.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            const item = element.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Fecha todos os itens
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Abre o item clicado se não estava ativo
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
